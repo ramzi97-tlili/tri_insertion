@@ -1,0 +1,28 @@
+PROCEDURE tri_insertion(arr: ARRAY_OF INTEGER[n] ;)
+VAR
+    n == length.arr   
+BEGIN
+Read(n);
+    FOR i FROM 1 TO n STEP 1  DO
+        x = arr[i] 
+        j = i
+        
+        WHILE (j > 0 && arr[j - 1] > x) DO
+        
+            arr[j] = arr[j - 1]
+            j = j - 1
+            arr[j] == x
+        
+        END_WHILE
+        arr[j] = x
+    END_FOR
+END
+
+ALGORITHM tri
+VAR
+    arr : ARRAY_OF INTEGER[n];
+    n:INTEGER;
+    i,j,x:INTEGER;
+BEGIN
+    tri_insertion();
+END
